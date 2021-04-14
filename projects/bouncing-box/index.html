@@ -14,7 +14,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 100px;  /* <--- Change me! */
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -58,7 +58,7 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			var postionX = 0; 
+			var positionX = 0; 
             var points = 0;
             var speed = 10;
 			
@@ -68,12 +68,12 @@
 			turn it around! 
 			*/
 			function update() {
-                moveBoxTo(postionX)
-                    positionX = postionX + speed;
-                    if (postionX > boardWidth) {
+                moveBoxTo(positionX)
+                    positionX = positionX + speed;
+                    if (positionX > boardWidth) {
                         speed = speed * -1;
                     }
-                    if (postionX < 0) {
+                    if (positionX < 0) {
                         speed = speed * -1;
                     }   
 
@@ -85,7 +85,7 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-                postionX = 0;
+                positionX = 0;
                     speed = speed + 3;
                     if (speed > 0) {
                         speed = speed + 3;
@@ -94,7 +94,7 @@
                         speed = speed - 3;
                     }
                     points = points + 1;
-                    changedBoxText(points);
+                    changeBoxText(points);
 
 			};
 		})();
